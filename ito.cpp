@@ -164,7 +164,7 @@ double *cen_diff(double *x_i, double *(*func)(double **, double *, double), \
         x_i_backward[i] -= h;
         forward_funcval[i] = *(*func)(func_args,x_i_forward,t);
         backward_funcval[i] = *(*func)(func_args,x_i_backward,t);
-        cen_diff_deriv[i] = (forward_funcval[i] - backward_funcval[i]) / (2*h);
+        cen_diff_deriv[i] = (forward_funcval[i] - backward_funcval[i]) / (2.0*h);
     }
     return cen_diff_deriv;
 }
